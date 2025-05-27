@@ -208,9 +208,9 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Khyle Villorente - khyle_raeka_b_villorente@dlsu.edu.ph
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/github_username/repo_name](https://github.com/sunshinepdf/MCO1-CCDSALG)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,8 +229,8 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_sunshinepdf/repo_MCO1-CCDSALG.svg?style=for-the-badge
-[khyle-url]: https://github.com/github_sunshinepdf/repo_MCO1-CCDSALG/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/sunshinepdf/MCO1-CCDSALG.svg?style=for-the-badge
+[contributors-url]: https://github.com/sunshinepdf/MCO1-CCDSALG/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
 [forks-url]: https://github.com/github_username/repo_name/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
