@@ -159,7 +159,8 @@ Follow the installation guide on the website then run the prompt below in your t
        + resolvedIssue - if a bug has been fixed.
          
     * The **branchName** represent the name of the edits to be merged with main
-        _Make sure the branchName is comprehensive and describes the changes made as concise as possible_
+      <br />
+      _Make sure the branchName is comprehensive and describes the changes made as concise as possible_
 
 3. To switch branches run the commands below
    ```sh
@@ -192,7 +193,9 @@ See the [open issues](https://github.com/sunshinepdf/MCO1-CCDSALG/issues) for a 
 ## Contact
 
 Nathan Laborda - nathan_laborda@@dlsu.edu.ph
+<br />
 Ashley Fiona Lee - ashley_lee@dlsu.edu.ph
+<br />
 Khyle Villorente - khyle_raeka_b_villorente@dlsu.edu.ph
 
 Project Link: [https://github.com/sunshinepdf/MCO!-CCDSALG](https://github.com/sunshinepdf/MCO1-CCDSALG)
