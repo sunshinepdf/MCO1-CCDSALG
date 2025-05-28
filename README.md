@@ -24,8 +24,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -33,22 +31,16 @@
 <br />
 <div align="center">
   <a href="https://github.com/sunshinepdf/MCO1-CCDSALG">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">MCO1-CCDSALG: Convex Hull</h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/sunshinepdf/MCO1-CCDSALG"><strong>Explore the docs »</strong></a>
-    <br />
+    This project computes the convex hull of a given set of 2D points using the ** Graham's Scan** algorithm. When run, the program accepts a text file input containing the data to be computed and outputs a text file of the computed data. _This project was created by: Nathan Laborda, Ashley Fiona Lee, and Khyle Villorente in partial completion of their requirements for the course CCDSALG._
     <br />
     <a href="https://github.com/sunshinepdf/MCO1-CCDSALG">View Demo</a>
-    &middot;
-    <a href="https://github.com/sunshinepdf/MCO1-CCDSALG/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/sunshinepdf/MCO1-CCDSALG/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <br />
+    <a href="https://github.com/sunshinepdf/MCO1-CCDSALG">Check project specs</a>
   </p>
 </div>
 
@@ -74,7 +66,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
