@@ -95,7 +95,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 ### Built With
 
-* [![C][C.c]][C-url]
+* [![C][C-shield]][C-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
