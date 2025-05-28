@@ -237,6 +237,6 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
-[C.c]: https://img.shields.io/badge/c-#A8B9CC?style=for-the-badge&logo=angular&logoColor=white
+[C-shield]: https://img.shields.io/c
 [C-url]: https://devdocs.io/c/
 
