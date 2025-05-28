@@ -60,10 +60,10 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installing-your-local-repo">Installing your local repo</a></li>
+        <li><a href="#commit-and-request-protocols">Commit and Request Protocols</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -76,9 +76,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+ This project computes the convex hull of a given set of 2D points using the ** Graham's Scan** algorithm. When run, the program accepts a text file input containing the data to be computed and outputs a text file of the computed data. It implements two versions of the algorithm (one "slow" and one "fast") in order to test the programmers' understanding of sorting algorithms and their applications.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,8 +93,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To set up a local copy follow these simple steps.
 
 ### Prerequisites
 
@@ -118,85 +115,87 @@ Follow the installation guide on the website then run the prompt below in your t
   ```sh
    git --version
   ```
-### Installating your local repo
+### Installing your local repo
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo on your local desktop by inputting the prompt in your terminal.
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/sunshinepdf/MCO1-CCDSALG.git
    ```
-3. Install NPM packages
+   
+2. Go into the file that git just created.
    ```sh
-   npm install
+   cd MCO1-CCDSALG # edit if the directory you cloned the repo in is different
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+   
+3. Change git remote url to avoid accidental pushes to base project
    ```sh
-   git remote set-url origin github_username/repo_name
+   git remote set-url origin https://github.com/sunshinepdf/MCO1-CCDSALG.git
    git remote -v # confirm the changes
    ```
+   
+### Commit and Request Protocols
 
+1. To avoid merge conflicts always run:
+   ```sh
+   git branch # make sure that you are currently on main
+   git pull
+   git status # run to confirm that your branch is up to date
+   ```
+   before working on your code.
+   This ensures that the current data in your local repository, matches the data uploaded on our main repository.
+
+2. Create a new branch for every added feature, edit, or resolved issue.
+   ```sh
+   git checkout -b <branch_name> # creates a new branch and switches you to that branch automatically
+   ```
+   Suggested format of the branch name:
+       **##/type/branchName**
+   
+    * The **##** represent the feature number
+      
+    * The **type** represents that kind of changes made and should be changed to:
+       + feature - if a new function is added,
+       + edit - if minor edits (e.g. documentation, minor fixes, etc.) is added,
+       + resolvedIssue - if a bug has been fixed.
+         
+    * The **branchName** represent the name of the edits to be merged with main
+        _Make sure the branchName is comprehensive and describes the changes made as concise as possible_
+
+3. To switch branches run the commands below
+   ```sh
+   git branch # lists the existing branches
+   git checkout <branch_name> # switches you to that branch
+   ```
+4. Once changes are done in the branch, you should add, commit, and push changes to the remote:
+   ```sh
+   git add .
+   git commit -m "insert message"
+   git push -u origin <branch name>
+   ```
+For further details on other git commands feel free to read the guide [here](https://www.atlassian.com/git/glossary#commands).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
 ## Roadmap
-
+_will be updated once a detailed timeline is set_
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/sunshinepdf/MCO1-CCDSALG/issues) for a full list of planned features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Top contributors:
-
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
-</a>
-
 
 <!-- CONTACT -->
 ## Contact
 
+Nathan Laborda -  
+Ashley Fiona Lee -
 Khyle Villorente - khyle_raeka_b_villorente@dlsu.edu.ph
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/sunshinepdf/MCO1-CCDSALG)
+Project Link: [https://github.com/sunshinepdf/MCO!-CCDSALG](https://github.com/sunshinepdf/MCO1-CCDSALG)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,17 +216,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/sunshinepdf/MCO1-CCDSALG.svg?style=for-the-badge
 [contributors-url]: https://github.com/sunshinepdf/MCO1-CCDSALG/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[forks-shield]: https://img.shields.io/github/forks/sunshinepdf/MCO1-CCDSALG.svg?style=for-the-badge
+[forks-url]: https://github.com/sunshinepdf/MCO1-CCDSALG/network/members
+[stars-shield]: https://img.shields.io/github/stars/sunshinepdf/MCO1-CCDSALG.svg?style=for-the-badge
+[stars-url]: https://github.com/sunshinepdf/MCO1-CCDSALG/stargazers
+[issues-shield]: https://img.shields.io/github/issues/sunshinepdf/MCO1-CCDSALG.svg?style=for-the-badge
+[issues-url]: https://github.com/sunshinepdf/MCO1-CCDSALG/issues
 [C-shield]: https://img.shields.io/badge/-C-blue.svg?style=for-the-badge&logo=c
 [C-url]: https://devdocs.io/c/
 
