@@ -108,6 +108,7 @@ The following (or something similar) should be displayed:
   Copyright (C) 2024 Free Software Foundation, Inc.
   ```
 Ensure you have Git installed. [Installer Link Here](https://git-scm.com/downloads/win)
+<br />
 Follow the installation guide on the website then run the prompt below in your terminal to check.
 * git 
   ```sh
@@ -140,9 +141,10 @@ Follow the installation guide on the website then run the prompt below in your t
    git status # run to confirm that your branch is up to date
    ```
    before working on your code.
+   <br />
    This ensures that the current data in your local repository, matches the data uploaded on our main repository.
 
-2. Create a new branch for every added feature, edit, or resolved issue.
+3. Create a new branch for every added feature, edit, or resolved issue.
    ```sh
    git checkout -b <branch_name> # creates a new branch and switches you to that branch automatically
    ```
@@ -160,12 +162,12 @@ Follow the installation guide on the website then run the prompt below in your t
       <br />
       _Make sure the branchName is comprehensive and describes the changes made as concise as possible_
 
-3. To switch branches run the commands below
+4. To switch branches run the commands below
    ```sh
    git branch # lists the existing branches
    git checkout <branch_name> # switches you to that branch
    ```
-4. Once changes are done in the branch, you should add, commit, and push changes to the remote:
+5. Once changes are done in the branch, you should add, commit, and push changes to the remote:
    ```sh
    git add .
    git commit -m "insert message"
