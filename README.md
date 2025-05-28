@@ -36,7 +36,7 @@
 <h3 align="center">MCO1-CCDSALG: Convex Hull</h3>
 
   <p align="center">
-    This project computes the convex hull of a given set of 2D points using the **Graham's Scan** algorithm. When run, the program accepts a text file input containing the data to be computed and outputs a text file of the computed data. _This project was created by: Nathan Laborda, Ashley Fiona Lee, and Khyle Villorente in partial completion of their requirements for the course CCDSALG._
+    This project computes the convex hull of a given set of 2D points using the **Graham's Scan** algorithm. When run, the program accepts a text file input containing the data to be computed and outputs a text file of the computed data. _This project was created by: Nathan Laborada, Ashley Fiona Lee, and Khyle Villorente in partial completion of their requirements for the course CCDSALG._
     <br />
     <a href="https://github.com/sunshinepdf/MCO1-CCDSALG">View Demo</a>
     <br />
@@ -192,7 +192,7 @@ See the [open issues](https://github.com/sunshinepdf/MCO1-CCDSALG/issues) for a 
 <!-- CONTACT -->
 ## Contact
 
-Nathan Laborda - nathan_laborda@@dlsu.edu.ph
+Nathan Laborada - nathan_laborada@dlsu.edu.ph
 <br />
 Ashley Fiona Lee - ashley_lee@dlsu.edu.ph
 <br />
