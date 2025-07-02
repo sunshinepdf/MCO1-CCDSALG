@@ -1,21 +1,40 @@
-#include "driver-helper.h"
+/**
+ * CCDSALG MCO1 GROUP 23
+ * Description: a program that will compute the convex hull of a given set of 2D points using the Graham’s Scan algorithm.
+ * Authors:
+ * Laborada, Nathan
+ * Lee, Ashley Fiona
+ * Villorente, Khyle Raeke
+ */
 
+ #include "driver-helper.h"
+
+/*
+ * This function reads point data from a text file and stores it in an array.
+ * The file format should have the number of points on the first line, followed
+ * by coordinate pairs (x y) on subsequent lines. Validates that coordinates
+ * are non-negative and handles various error conditions.
+ *
+ * @param filename The name of the input file to read from
+ * @param points Array to store the loaded Point structures
+ * @param n Pointer to integer that will store the number of points read
+ */
 void importInput(Filename filename, Point points[], int *n) {
     FILE *file = fopen(filename, "r");
 
     if (file == NULL) {
-        printf("ERROR: %s does not exist.\n", filename);
+        printf("ERROR: %s does not exist.\n", filename); // Error mesage for invalid Filename
         *n = 0;
         return;
     }
     else if(fscanf(file, "%d", n) != 1) {
-            printf("ERROR: Could not read the number of points from %s.\n", filename);
+            printf("ERROR: Could not read the number of points from %s.\n", filename); //Error message when no number of points are read
             fclose(file);
             *n = 0;
             return;
         }
         else if (*n <= 0) {
-            printf("ERROR: The number of points must be greater than zero.\n");
+            printf("ERROR: The number of points must be greater than zero.\n"); //Error message when number of points is equal to zero
             fclose(file);
             *n = 0;
             return;
@@ -25,14 +44,14 @@ void importInput(Filename filename, Point points[], int *n) {
         {
             if (fscanf(file, "%lf %lf", &points[i].x, &points[i].y) != 2) 
             {
-                printf("ERROR: Could not read point %d from %s.\n", i + 1, filename);
+                printf("ERROR: Could not read point %d from %s.\n", i + 1, filename); //Error message for when a point is not read
                 fclose(file);
                 *n = i;
                 return;
             }
             else if (points[i].x < 0 || points[i].y < 0) 
             {
-                printf("ERROR: Coordinates must be non-negative for point %d.\n", i + 1);
+                printf("ERROR: Coordinates must be non-negative for point %d.\n", i + 1); //Error message when a point is negative
                 fclose(file);
                 *n = i;
                 return;
@@ -42,6 +61,15 @@ void importInput(Filename filename, Point points[], int *n) {
     fclose(file);
 }
 
+/*
+ * This function displays an array of points in a formatted manner with a
+ * descriptive title. Each point is shown with its index number and coordinates
+ * rounded to 2 decimal places for readability.
+ *
+ * @param points Array of Point structures to display
+ * @param n Number of points in the array to display
+ * @param title Descriptive string to print as a header before the points
+ */
 void displayPoints(Point points[], int n, const char* title) {
     printf("\n%s:\n", title);
     for (int i = 0; i < n; i++) {

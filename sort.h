@@ -1,4 +1,13 @@
-#include <math.h>
+/**
+ * CCDSALG MCO1 GROUP 23
+ * Description: a program that will compute the convex hull of a given set of 2D points using the Graham’s Scan algorithm.
+ * Authors:
+ * Laborada, Nathan
+ * Lee, Ashley Fiona
+ * Villorente, Khyle Raeke
+ */
+
+ #include <math.h>
 #include "stack.h"
 
 #define PI 3.14159265358979323846
