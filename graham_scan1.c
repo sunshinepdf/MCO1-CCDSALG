@@ -1,7 +1,16 @@
-#include "driver-helper.c"
+/**
+ * CCDSALG MCO1 GROUP 23
+ * Description: a program that will compute the convex hull of a given set of 2D points using the Graham’s Scan algorithm.
+ * Authors:
+ * Laborada, Nathan
+ * Lee, Ashley Fiona
+ * Villorente, Khyle Raeke
+ */
+
+ #include "driver-helper.c"
 
 int main() {
-    Filename filename; // Default filename for testing
+    Filename filename; 
     Point points[MAX_STACK_SIZE];
     int n;
 
