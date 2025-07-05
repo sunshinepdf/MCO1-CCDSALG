@@ -8,13 +8,14 @@
  */
 
 #include "driver-helper.c"
-
-#include "driver-helper.c"
+#include <time.h>
 
 int main() {
     Filename filename; 
     Point points[MAX_STACK_SIZE];
     int n;
+    clock_t the_start;
+    clock_t the_end;
 
     printf("Enter the filename to import points from: ");
     scanf("%s", filename);
@@ -45,8 +46,11 @@ int main() {
 
         //Test 4: Sort points using quicksort
         printf("\n=== Testing quickSort() ===\n");
+        the_start = clock();
         quickSort(points, n, anchor);
+        the_end = clock();
         displayPoints(points, n, "Points sorted by polar angle using quicksort");
+        printf("%6ld %15lf\n", n, (double)(the_end - the_start));
     }
 
     return 0;
