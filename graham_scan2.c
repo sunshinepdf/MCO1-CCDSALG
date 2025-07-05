@@ -9,8 +9,6 @@
 
 #include "driver-helper.c"
 
-#include "driver-helper.c"
-
 int main() {
     Filename filename; 
     Point points[MAX_STACK_SIZE];
