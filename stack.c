@@ -42,6 +42,8 @@ Point POP(Stack *s)
 	if (ISEMPTY(s))
 	{
 		printf("Stack is empty and can not pop elements or it will cause underflow"); //not sure if i should use printf or fprintf
+		Point errorPoint = {-1.0, -1.0};
+		return errorPoint;
 	}
 	else
 	{
@@ -54,6 +56,8 @@ Point TOP(Stack *s)
 	if (ISEMPTY(s))
 	{
 		printf("Stack is empty"); //not sure if i should use printf or fprintf
+		Point errorPoint = {-1.0, -1.0};
+		return errorPoint;
 	}
 	else
 	{
@@ -66,6 +70,8 @@ Point NEXTTOTOP(Stack *s)
 	if (ISEMPTY(s))
 	{
 		printf("stack is empty"); //not sure if i should use printf or fprintf
+		Point errorPoint = {-1.0, -1.0};
+		return errorPoint;
 	}
 	else
 	{

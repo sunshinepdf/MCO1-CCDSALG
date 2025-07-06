@@ -9,6 +9,7 @@
 
  #include "driver-helper.h"
 
+
 /*
  * This function reads point data from a text file and stores it in an array.
  * The file format should have the number of points on the first line, followed
@@ -75,5 +76,20 @@ void displayPoints(Point points[], int n, const char* title) {
     for (int i = 0; i < n; i++) {
         printf("Point %d: (%.2f, %.2f)\n", i + 1, points[i].x, points[i].y);
     }
+}
+
+
+void exportInput(Filename filename, Point points[], int n) {
+    FILE *file = fopen(filename, "w");
+    if (file == NULL) {
+        printf("ERROR: Could not open %s for writing.\n", filename);
+        return;
+    }
+    fprintf(file, "%d\n", n);
+    for (int i = 0; i < n; i++) {
+        fprintf(file, "%.2f %.2f\n", points[i].x, points[i].y);
+    }
+    fclose(file);
+    printf("Successfully exported %d points to %s.\n", n, filename);
 }
 

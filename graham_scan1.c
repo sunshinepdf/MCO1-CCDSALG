@@ -7,50 +7,78 @@
  * Villorente, Khyle Raeke
  */
 
- #include "driver-helper.c"
+#include "graham-helper.h"
 
-int main() {
-    Filename filename; 
-    Point points[MAX_STACK_SIZE];
-    int n;
+/*
+ * This function calculates the cross product of vectors OA and OB to determine
+ * the orientation of three points. Used to check if points make a left turn,
+ * right turn, or are collinear.
+ *
+ * @param O Origin point
+ * @param A Second point
+ * @param B Third point
+ * @return Positive if counter-clockwise, negative if clockwise, zero if collinear
+ */
+double crossProduct(Point O, Point A, Point B) {
+    return (A.x - O.x) * (B.y - O.y) - (A.y - O.y) * (B.x - O.x);
+}
 
-    printf("Enter the filename to import points from: ");
-    scanf("%s", filename);
+/*
+ * This function implements the Graham scan algorithm to find the convex hull
+ * of a set of points. The algorithm sorts points by polar angle relative to
+ * the anchor point, then uses a stack to maintain the convex hull vertices.
+ *
+ * @param points Array of points (sorted by polar angle)
+ * @param n Number of points in the array
+ * @param hull Pointer to stack that will store the convex hull vertices
+ * @return None (void function, fills the hull stack)
+ */
+void grahamScan1(Point points[], int n, Stack *hull) {
+    clock_t the_start; // start time 
+    clock_t the_end;   // end time
+    int i;
+
+    the_start = clock();
+
+    Point anchor = findAnchorPoint(points, n);
+    selectionSort(points, n, anchor);
+    if (n < 3) {
+        printf("Error: Need at least 3 points for convex hull\n");
+        CREATE(hull);
+        return;
+    }
     
-    importInput(filename, points, &n);
-
-    if (n > 0) {
-        printf("Successfully read %d points from %s.\n", n, filename);
-        
-        // Display original points
-        displayPoints(points, n, "Original Points");
-        
-        // Test 1: Find the lowest point (anchor)
-        printf("\n=== Testing findLowestPoint() ===\n");
-        Point anchor = findAnchorPoint(points, n);
-        printf("Lowest point (anchor): (%.2f, %.2f)\n", anchor.x, anchor.y);
-        
-        // Display points after finding anchor (anchor should now be at index 0)
-        displayPoints(points, n, "Points after finding anchor");
-        
-        // Test 2: Test polar angle calculation
-        printf("\n=== Testing solvePolarAngle() ===\n");
-        for (int i = 1; i < n; i++) {
-            double angle = solvePolarAngle(anchor, points[i]);
-            printf("Polar angle from anchor (%.2f, %.2f) to point (%.2f, %.2f): %.2f degrees\n", 
-                   anchor.x, anchor.y, points[i].x, points[i].y, angle);
+    // Initialize the stack
+    CREATE(hull);
+    
+    // Push first two points (anchor and first sorted point)
+    PUSH(hull, points[0]);  // Anchor point
+    PUSH(hull, points[1]);  // First point sorted by polar angle
+    
+    // Process remaining points
+    for (i = 2; i < n; i++) {
+        // Remove points that make clockwise turn (right turn)
+        while (hull->top >= 1) {
+            Point top = TOP(hull);
+            Point nextToTop = NEXTTOTOP(hull);
+            
+            // Calculate cross product to determine turn direction
+            double cp = crossProduct(nextToTop, top, points[i]);
+            
+            if (cp > 0) {
+                // Counter-clockwise turn (left turn) - keep the point
+                break;
+            }
+            
+            // Clockwise turn (right turn) - remove the top point
+            POP(hull);
         }
         
-        // Test 3: Sort points by polar angle
-        printf("\n=== Testing selectionSort() ===\n");
-        selectionSort(points, n, anchor);
-        displayPoints(points, n, "Points sorted by polar angle");
-
-        //Test 4: Sort points using quicksort
-        printf("\n=== Testing quickSort() ===\n");
-        quickSort(points, n, anchor);
-        displayPoints(points, n, "Points sorted by polar angle using quicksort");
+        // Push current point to the hull
+        PUSH(hull, points[i]);
     }
 
-    return 0;
+    the_end = clock();
+    printf("%6d %15lf\n", n, (double)(the_end - the_start));  
 }
+
