@@ -57,8 +57,9 @@ double solveDistance(Point anchor, Point p){
 Point findAnchorPoint(Point points[], int n) {
     Point anchor = points[0];
     int anchorIndex = 0;
-    
-    for (int i = 1; i < n; i++) {
+    int i;
+
+    for (i = 1; i < n; i++) {
         if (points[i].y < anchor.y || 
             (points[i].y == anchor.y && points[i].x < anchor.x)) {
             anchor = points[i];
@@ -163,10 +164,12 @@ int partition(Point points[], int low, int high, Point anchor){
  * @param anchor Reference point for polar angle calculations
  */
 void selectionSort(Point points[], int n, Point anchor) {
-    for (int i = 1; i < n - 1; i++) {
+    int i,j;
+
+    for (i = 1; i < n ; i++) {
         int minIndex = i;
 
-        for (int j = i + 1; j < n; j++) {
+        for (j = i + 1; j < n; j++) {
             if (comparePoints(anchor, points[j], points[minIndex]) < 0) {
                 minIndex = j;
             }
