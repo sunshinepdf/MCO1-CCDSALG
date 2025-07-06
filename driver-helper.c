@@ -50,15 +50,8 @@ void importInput(Filename filename, Point points[], int *n) {
                 *n = i;
                 return;
             }
-            else if (points[i].x < 0 || points[i].y < 0) 
-            {
-                printf("ERROR: Coordinates must be non-negative for point %d.\n", i + 1); //Error message when a point is negative
-                fclose(file);
-                *n = i;
-                return;
-            }
-
-    }
+        }
+        
     fclose(file);
 }
 
@@ -74,7 +67,7 @@ void importInput(Filename filename, Point points[], int *n) {
 void displayPoints(Point points[], int n, const char* title) {
     printf("\n%s:\n", title);
     for (int i = 0; i < n; i++) {
-        printf("Point %d: (%.2f, %.2f)\n", i + 1, points[i].x, points[i].y);
+        printf("Point %d: (%.6f, %.6f)\n", i + 1, points[i].x, points[i].y);
     }
 }
 
@@ -87,7 +80,7 @@ void exportInput(Filename filename, Point points[], int n) {
     }
     fprintf(file, "%d\n", n);
     for (int i = 0; i < n; i++) {
-        fprintf(file, "%.2f %.2f\n", points[i].x, points[i].y);
+        fprintf(file, "%.6f %.6f\n", points[i].x, points[i].y);
     }
     fclose(file);
     printf("Successfully exported %d points to %s.\n", n, filename);
