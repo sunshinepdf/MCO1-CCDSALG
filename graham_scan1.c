@@ -80,6 +80,6 @@ void grahamScan1(Point points[], int n, Stack *hull) {
 
     the_end = clock();
     double time_taken = ((double)(the_end - the_start));
-    printf("Number of points: %6d Time Elapsed: %15.9lf seconds\n", n, time_taken);  
+    printf("Number of points: %6d Time Elapsed: %15.9lf milliseconds\n", n, time_taken);  
 }
 
