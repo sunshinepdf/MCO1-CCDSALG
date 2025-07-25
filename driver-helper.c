@@ -71,7 +71,15 @@ void displayPoints(Point points[], int n, const char* title) {
     }
 }
 
-
+/*
+ * This function exports an array of points to a specified text file.
+ * The file starts with the number of points, followed by (x y) pairs
+ * formatted to six decimal places on separate lines.
+ *
+ * @param filename The name of the input file to read from
+ * @param points Array to store the loaded Point structures
+ * @param n Pointer to integer that will store the number of points read
+ */
 void exportInput(Filename filename, Point points[], int n) {
     FILE *file = fopen(filename, "w");
     if (file == NULL) {
